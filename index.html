@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saimin & Nusrat Game</title>
+<style>
+body{margin:0;font-family:sans-serif;background:linear-gradient(135deg,#ff9a9e,#fad0c4);height:100vh;display:flex;justify-content:center;align-items:center}
+.card{background:white;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.2);text-align:center;width:300px}
+h1{color:#ff4d6d}
+button{background:#ff4d6d;color:white;border:none;padding:15px 25px;border-radius:30px;font-size:18px;margin:10px;cursor:pointer}
+#no{position:relative}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>Saimin ❤️ Nusrat</h1>
+<p id="q">Nusrat, tumi ki Saimin ke valobaso?</p>
+<button id="yes" onclick="yesClick()">YES 😍</button>
+<button id="no" onmouseover="moveNo()" onclick="moveNo()">NO 😜</button>
+<p id="ans" style="font-weight:bold;color:#ff4d6d;margin-top:15px"></p>
+</div>
+<script>
+function yesClick(){
+ document.getElementById('ans').innerHTML='Yay! Saimin o tomake onek valobase! 💖💖💖';
+ document.getElementById('q').innerHTML='I knew it! 😘';
+}
+function moveNo(){
+ let b=document.getElementById('no');
+ b.style.left=Math.random()*100-50+'px';
+ b.style.top=Math.random()*100-50+'px';
+}
+</script>
+</body>
+</html>
